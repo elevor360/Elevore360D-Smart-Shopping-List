@@ -26,5 +26,7 @@ function openCard(c){stopCamera();$('viewTitle').textContent=c.store;$('viewLabe
 $('fullscreenCard').onclick=async()=>{if(document.fullscreenElement){await document.exitFullscreen().catch(()=>{})}else if($('cardViewer').requestFullscreen){await $('cardViewer').requestFullscreen().catch(()=>{})}};
 const originalShow=show;show=function(id){if(id!=='wallet'&&id!=='cardViewer')stopCamera();originalShow(id);if(id==='wallet')renderCards()};renderCards();
 
-// V2.1: direct navigation fallback and wallet diagnostics
-document.getElementById("walletNav").addEventListener("click",()=>{document.getElementById("wallet").classList.remove("hidden");document.getElementById("lists").classList.add("hidden");document.getElementById("help").classList.add("hidden");document.getElementById("cardViewer").classList.add("hidden");renderCards()});
+
+// V2.2: explicit navigation handlers; do not rely on inline event handlers.
+$('walletNav').addEventListener('click',()=>show('wallet'));
+$('backToWallet').addEventListener('click',()=>show('wallet'));
