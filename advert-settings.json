@@ -1,0 +1,23 @@
+{
+  "localDealsUrl": "",
+  "positions": {
+    "top": {
+      "enabled": false,
+      "filename": "ads/shop-top.jpg",
+      "alt": "Shop advertisement",
+      "link": ""
+    },
+    "middle": {
+      "enabled": false,
+      "filename": "ads/shop-middle.jpg",
+      "alt": "Shop advertisement",
+      "link": ""
+    },
+    "bottom": {
+      "enabled": false,
+      "filename": "ads/shop-bottom.jpg",
+      "alt": "Shop advertisement",
+      "link": ""
+    }
+  }
+}
